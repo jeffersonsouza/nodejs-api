@@ -1,0 +1,11 @@
+{
+    "name"         : "node-api",
+    "version"      : "0.0.1",
+    "description"  : "Simple api test.",
+    "main"         : "server.js",
+    "author"       : "Jefferson Souza",
+    "dependencies" : {
+        "restify"    : "~2.0",
+        "mongoose"   : "~3.6.2"
+    }
+}
