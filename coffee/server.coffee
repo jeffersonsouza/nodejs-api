@@ -1,18 +1,13 @@
-restify = require 'restify'
-
-respond = (request, response, next) ->
-    response.send('Hello ' + request.params.name)
-    next()
-
-server = restify.createServer()
+express = require 'express'
+app = express()
 
 # routes
 
-server.get('/hello/:name', (request, response, next) ->
-    response.send(201)
+app.get('/hello/:name', (request, response) ->
+    response.status(200).send 'Olá ' + request.params.name
 )
 #server.head('/hello/:name', respond)
 
-server.listen(9005, ->
-    console.log '%s is listening at %', server.name, server.url
+server = app.listen(9005, ->
+    console.log 'server started...'
 )
